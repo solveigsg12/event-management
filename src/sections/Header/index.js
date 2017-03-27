@@ -6,9 +6,8 @@ class App extends Component {
   render() {
     return (
       <div className="headerContainer">
-        <div className="header">
-          <img src={event} className="headerImg" />
-          <h2>Welcome to event management by Tara</h2>
+        <div className="headerBackgroundImg">
+          <h2 className="headerText">Welcome to event management by Tara</h2>
         </div>
       </div>
     );
