@@ -1,4 +1,22 @@
-.headerImg {
-  width: 100%;
-  max-width: 1140px;
+.headerContainer {
+  display: flex;
+  flex-grow: 1;
+}
+
+.headerBackgroundImg {
+  display: flex;
+  flex-grow: 1;
+  background-image: url('../../img/event.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 600px;
+  width: 100%
+}
+
+.headerText {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-weight: 500;
+  font-size: 40px;
 }
