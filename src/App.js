@@ -26,10 +26,14 @@ class App extends Component {
     var parameters = { "apiKey": "AJFGsPLMhzdBq3IN", "timeout": 5000 }; //Optional parameter: Timeout in MS
     var sendinObj = new sendinblue(parameters);
 
-    var input = {};
-    sendinObj.get_account(input, function(err, response){
+var data = { "to" : {"evasteingrims@gmail.com":"to whom!"},
+		"from" : ["from@email.com", "from email!"],
+		"subject" : "My subject",
+		"html" : "This is the <h1>HTML</h1>"
+	}
+    sendinObj.send_email(data, function(err, response){
          console.log(response);
-    })
+    });
   }
 }
 
