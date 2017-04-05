@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import event from '../../img/event.jpg';
 import './index.css';
 
-class App extends Component {
+class Header extends Component {
   render() {
     return (
       <div className="headerContainer">
@@ -14,4 +14,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Header;
