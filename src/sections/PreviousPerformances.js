@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './index.css';
+import './PreviousPerformances.css';
 
 class PreviousPerformances extends Component {
   render() {

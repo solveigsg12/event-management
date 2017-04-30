@@ -2,17 +2,15 @@ import React from 'react';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 
 import App from './App';
-import Home from './sections/Home/Home';
-import Signup from './sections/Signup/Signup';
-import About from './sections/About/index';
-import Contact from './sections/Contact/index';
-import PreviousPerformances from './sections/PreviousPerformances/index';
+import Signup from './sections/Signup';
+import About from './sections/About';
+import Contact from './sections/Contact';
+import PreviousPerformances from './sections/PreviousPerformances';
 
 const Routes = props => (
   <Router>
     <div>
       <Route exact={true} path="/" component={App} />
-      <Route exact={true} path="/home" component={Home} />
       <Route exact={true} path="/sign-up" component={Signup} />
       <Route exact={true} path="/about" component={About} />
       <Route exact={true} path="/contact" component={Contact} />

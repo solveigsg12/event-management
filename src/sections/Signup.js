@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
-import * as formActions from '../../actions/form';
+import * as formActions from '../actions/form';
 import './Signup.css';
 
 class Signup extends Component {
@@ -20,24 +20,24 @@ class Signup extends Component {
   }
 
   setName() {
-    this.props.actions.setPerformerName('email')
+    this.props.actions.setPerformerName('email');
   }
 
   setAge() {
-    this.props.actions.setPerformerAge('age')
+    this.props.actions.setPerformerAge('age');
   }
 }
 
 function mapStateToProps(state, props) {
   return {
-    form: state.form
+    form: state.form,
   };
 }
 
 function mapDispatchToProps(dispatch) {
   return {
-    actions: bindActionCreators(formActions, dispatch)
-  }
+    actions: bindActionCreators(formActions, dispatch),
+  };
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Signup);
