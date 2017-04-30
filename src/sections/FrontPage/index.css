@@ -1,0 +1,19 @@
+.frontPageContainer {
+  display: flex;
+  flex-direction: row;
+  height:100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.frontPageLink:hover {
+  color: #7CFC00;
+}
+
+.frontPageLink {
+  padding: 10px;
+  color: #ff6969;
+  font-size: 30px;
+  font-weight: 500;
+  text-decoration: none;
+}
