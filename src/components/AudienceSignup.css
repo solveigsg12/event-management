@@ -1,0 +1,4 @@
+.audienceForm {
+  display: flex;
+  flex-direction: column;
+}
