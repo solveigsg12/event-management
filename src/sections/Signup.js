@@ -1,42 +1,64 @@
-import React, {Component} from 'react';
-import {connect} from 'react-redux';
-import {bindActionCreators} from 'redux';
-import * as formActions from '../actions/form';
-import './Signup.css';
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
+import * as formActions from "../actions/form";
+import HostSignup from "../components/HostSignup";
+import AudienceSignup from "../components/AudienceSignup";
+import "./Signup.css";
 
 class Signup extends Component {
   render() {
+    const { signupType } = this.props;
+
     return (
-      <div className="Contact">
-        <h1>Contact Page</h1>
-        <button onClick={() => this.setName()}>
-          Button
-        </button>
-        <button onClick={() => this.setAge()}>
-          Button2
-        </button>
+      <div className="container">
+        <div className="innerContainer">
+          <h1>Sign up</h1>
+          <form>
+            <label htmlFor="host">Host</label>
+            <input
+              type="radio"
+              name="signupType"
+              value="host"
+              onChange={event => this.onChange(event)}
+            />
+            <label htmlFor="audience">Audience</label>
+            <input
+              type="radio"
+              name="signupType"
+              value="audience"
+              onChange={event => this.onChange(event)}
+            />
+          </form>
+          {signupType && signupType === "host" && <HostSignup />}
+          {signupType && signupType === "audience" && <AudienceSignup />}
+          {signupType &&
+            <button onClick={() => this.onSubmit()}>
+              Sign up
+            </button>}
+        </div>
       </div>
     );
   }
 
-  setName() {
-    this.props.actions.setPerformerName('email');
+  onChange(event) {
+    this.props.actions.setSignupType(event.target.value);
   }
 
-  setAge() {
-    this.props.actions.setPerformerAge('age');
+  onSubmit(event) {
+    //TODO send email to Tara
   }
 }
 
 function mapStateToProps(state, props) {
   return {
-    form: state.form,
+    signupType: state.form.get("signupType")
   };
 }
 
 function mapDispatchToProps(dispatch) {
   return {
-    actions: bindActionCreators(formActions, dispatch),
+    actions: bindActionCreators(formActions, dispatch)
   };
 }
 
