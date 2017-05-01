@@ -16,7 +16,15 @@
   display: flex;
   flex-direction: row;
   height: 100vh;
-  padding: 20px 0 20px 0;
+  padding: 20px;
+}
+
+.previousPerformancesImageText {
+  align-self: flex-end;
+  color: #7CFC00;
+  font-size: 30px;
+  font-weight: 400;
+  text-decoration: line-through;
 }
 
 .performance1 {

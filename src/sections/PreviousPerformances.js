@@ -7,9 +7,15 @@ class PreviousPerformances extends Component {
       <div className="perviousPerformancesContainer">
         <div className="previousPerformancesTitle">Previous Performances</div>
         <div className="performancesImageContainer">
-          <div className="performance1">The Car</div>
-          <div className="performance2">The Ocean</div>
-          <div className="performance3">The mountain</div>
+          <div className="performance1">
+            <span className="previousPerformancesImageText">The Car</span>
+          </div>
+          <div className="performance2">
+            <span className="previousPerformancesImageText">The Ocean</span>
+          </div>
+          <div className="performance3">
+            <span className="previousPerformancesImageText">The mountain</span>
+          </div>
         </div>
       </div>
     );
