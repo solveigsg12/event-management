@@ -1,0 +1,18 @@
+.errors {
+  left: 0;
+  right: 0;
+  opacity: 0;
+  margin-top: 5px;
+  color: red;
+  font-size: 14px;
+  font-weight: var(--font-weight-light);
+  transition: opacity var(--transition-time);
+}
+
+.errors--active {
+  opacity: 1;
+}
+
+.errorMessage {
+  word-wrap: break-word;
+}

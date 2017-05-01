@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import * as formActions from "../actions/form";
+import Input from "./Input";
 import "./HostSignup.css";
 
 class HostSignup extends Component {
@@ -16,6 +17,8 @@ class HostSignup extends Component {
       hostDescription,
       hostInterests
     } = this.props;
+
+    console.log(hostName.get("errors"));
     return (
       <div>
         <h1>Host signup</h1>
@@ -27,53 +30,61 @@ class HostSignup extends Component {
           This is for anyone, anyone at all. Both individuals or groups.
         </div>
         <form className="hostForm">
-          <label htmlFor="hostName">Name</label>
-          <input
-            type="text"
-            value={hostName || ""}
+          <Input
+            label="Name"
+            value={hostName.get("value")}
             onChange={event => this.onNameChange(event)}
+            onBlur={() => this.handleNameBlurred()}
+            error={hostName.get("errors")}
           />
-          <label htmlFor="hostAge">Age</label>
-          <input
-            type="text"
-            value={hostAge || ""}
+          <Input
+            label="Age"
+            value={hostAge.get("value")}
             onChange={event => this.onAgeChange(event)}
+            onBlur={() => this.handleAgeBlurred()}
+            error={hostAge.get("errors")}
           />
-          <label htmlFor="hostSex">Sex</label>
-          <input
-            type="text"
-            value={hostSex || ""}
+          <Input
+            label="Sex"
+            value={hostSex.get("value")}
             onChange={event => this.onSexChange(event)}
+            onBlur={() => this.handleSexBlurred()}
+            error={hostSex.get("errors")}
           />
-          <label htmlFor="hostAddress">Address</label>
-          <input
-            type="text"
-            value={hostAddress || ""}
+          <Input
+            label="Address"
+            value={hostAddress.get("value")}
             onChange={event => this.onAddressChange(event)}
+            onBlur={() => this.handleAddressBlurred()}
+            error={hostAddress.get("errors")}
           />
-          <label htmlFor="hostEmail">Email</label>
-          <input
-            type="text"
-            value={hostEmail || ""}
+          <Input
+            label="Email"
+            value={hostEmail.get("value")}
             onChange={event => this.onEmailChange(event)}
+            onBlur={() => this.handleEmailBlurred()}
+            error={hostEmail.get("errors")}
           />
-          <label htmlFor="hostNumber">Phone number</label>
-          <input
-            type="text"
-            value={hostNumber || ""}
+          <Input
+            label="Phone number"
+            value={hostNumber.get("value")}
             onChange={event => this.onNumberChange(event)}
+            onBlur={() => this.handleNumberBlurred()}
+            error={hostNumber.get("errors")}
           />
-          <label htmlFor="hostDescription">Short description of yourself</label>
-          <input
-            type="text"
-            value={hostDescription || ""}
+          <Input
+            label="Short description of yourself"
+            value={hostDescription.get("value")}
             onChange={event => this.onDescriptionChange(event)}
+            onBlur={() => this.handleDescriptionBlurred()}
+            error={hostDescription.get("errors")}
           />
-          <label htmlFor="hostInterests">Why are you interested?</label>
-          <input
-            type="text"
-            value={hostInterests || ""}
+          <Input
+            label="Why are you interested?"
+            value={hostInterests.get("value")}
             onChange={event => this.onInterestsChange(event)}
+            onBlur={() => this.handleInterestsBlurred()}
+            error={hostInterests.get("errors")}
           />
         </form>
       </div>
@@ -84,32 +95,64 @@ class HostSignup extends Component {
     this.props.actions.setHostName(event.target.value);
   }
 
+  handleNameBlurred() {
+    this.props.actions.setHostNameBlurred();
+  }
+
   onAgeChange(event) {
     this.props.actions.setHostAge(event.target.value);
+  }
+
+  handleAgeBlurred() {
+    this.props.actions.setHostAgeBlurred();
   }
 
   onSexChange(event) {
     this.props.actions.setHostSex(event.target.value);
   }
 
+  handleSexBlurred() {
+    this.props.actions.setHostSexBlurred();
+  }
+
   onAddressChange(event) {
     this.props.actions.setHostAddress(event.target.value);
+  }
+
+  handleAddressBlurred() {
+    this.props.actions.setHostAddressBlurred();
   }
 
   onEmailChange(event) {
     this.props.actions.setHostEmail(event.target.value);
   }
 
+  handleEmailBlurred() {
+    this.props.actions.setHostEmailBlurred();
+  }
+
   onNumberChange(event) {
     this.props.actions.setHostPhoneNumber(event.target.value);
+  }
+
+  handleNumberBlurred() {
+    this.props.actions.setHostPhoneNumberBlurred();
   }
 
   onDescriptionChange(event) {
     this.props.actions.setHostDescription(event.target.value);
   }
 
+  handleDescriptionBlurred() {
+    this.props.actions.setHostDescriptionBlurred();
+  }
+
   onInterestsChange(event) {
     this.props.actions.setHostInterests(event.target.value);
+  }
+
+  handleInterestsBlurred() {
+    this.props.actions.setHostInterestsBlurred();
   }
 }
 
