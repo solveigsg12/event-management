@@ -1,14 +1,17 @@
 .perviousPerformancesContainer {
   display: flex;
   flex-direction: column;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  height: 100vh;
 }
 
 .previousPerformancesTitle {
   position: absolute;
-  font-size: 100px;
+  font-size: 90px;
   font-weight: 600;
-  top: 10%;
-  left: 10%;
+  top: 15%;
+  left: 1%;
   justify-content: center;
   color: #ff6969;
 }

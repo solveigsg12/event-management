@@ -4,7 +4,7 @@
   height:100vh;
   align-items: center;
   justify-content: center;
-  background-color: #C8C8C8;
+  text-transform: uppercase;
 }
 
 .frontPageLink:hover {
@@ -12,10 +12,10 @@
 }
 
 .frontPageLink {
-  padding: 10px;
+  padding: 24px;
   color: #ff6969;
   font-family: monospace;
-  font-size: 40px;
+  font-size: 45px;
   font-weight: 500;
   text-decoration: none;
 }

@@ -1,10 +1,12 @@
 import React, {Component} from 'react';
+import Header from './Header';
 import './PreviousPerformances.css';
 
 class PreviousPerformances extends Component {
   render() {
     return (
       <div className="perviousPerformancesContainer">
+        <Header />
         <div className="previousPerformancesTitle">Previous Performances</div>
         <div className="performancesImageContainer">
           <div className="performance1">
