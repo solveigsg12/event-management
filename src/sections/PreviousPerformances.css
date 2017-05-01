@@ -29,23 +29,19 @@
   text-decoration: line-through;
 }
 
-.performance1 {
+.performance1, .performance2, .performance3 {
   display:flex;
   flex: 1;
+}
+.performance1 {
   background: url(../img/car.jpg);
   background-size: cover;
 }
-
 .performance2 {
-  display:flex;
-  flex: 1;
   background: url(../img/ocean.jpeg);
   background-size: cover;
 }
-
 .performance3 {
-  display:flex;
-  flex: 1;
   background: url(../img/mountain.jpeg);
   background-size: cover;
 }
