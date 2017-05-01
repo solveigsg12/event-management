@@ -8,7 +8,6 @@ import styles from "./Errors.css";
 class Input extends PureComponent {
   render() {
     const { error } = this.props;
-    console.log("Error", error);
     const hasError = Boolean(error && error.size);
     return (
       <div>

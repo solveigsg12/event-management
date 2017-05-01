@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
-import * as formActions from "../actions/form";
+import {isFormValid} from '../selectors/form';
+import * as formActions from "../actions/hostForm";
 import Input from "./Input";
 import "./HostSignup.css";
 
@@ -15,10 +16,9 @@ class HostSignup extends Component {
       hostEmail,
       hostNumber,
       hostDescription,
-      hostInterests
+      hostInterests,
+      isFormValid,
     } = this.props;
-
-    console.log(hostName.get("errors"));
     return (
       <div>
         <h1>Host signup</h1>
@@ -87,8 +87,17 @@ class HostSignup extends Component {
             error={hostInterests.get("errors")}
           />
         </form>
+        //TODO button disabled instead of hidden
+        {isFormValid &&
+          <button onClick={() => this.onSubmit()}>
+            Sign up
+          </button>}
       </div>
     );
+  }
+
+  onSubmit(event) {
+    //TODO send email to Tara
   }
 
   onNameChange(event) {
@@ -158,14 +167,15 @@ class HostSignup extends Component {
 
 function mapStateToProps(state, props) {
   return {
-    hostName: state.form.get("hostName"),
-    hostAge: state.form.get("hostAge"),
-    hostSex: state.form.get("hostSex"),
-    hostAddress: state.form.get("hostAddress"),
-    hostEmail: state.form.get("hostEmail"),
-    hostNumber: state.form.get("hostNumber"),
-    hostDescription: state.form.get("hostDescription"),
-    hostInterests: state.form.get("hostInterests")
+    hostName: state.hostForm.get("hostName"),
+    hostAge: state.hostForm.get("hostAge"),
+    hostSex: state.hostForm.get("hostSex"),
+    hostAddress: state.hostForm.get("hostAddress"),
+    hostEmail: state.hostForm.get("hostEmail"),
+    hostNumber: state.hostForm.get("hostNumber"),
+    hostDescription: state.hostForm.get("hostDescription"),
+    hostInterests: state.hostForm.get("hostInterests"),
+    isFormValid: isFormValid(state),
   };
 }
 

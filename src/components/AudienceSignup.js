@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
-import * as formActions from "../actions/form";
+import { isFormValid } from "../selectors/form";
+import * as formActions from "../actions/audienceForm";
 import Input from "./Input";
 import "./AudienceSignup.css";
 
@@ -13,7 +14,8 @@ class AudienceSignup extends Component {
       audienceSex,
       audienceAddress,
       audienceEmail,
-      audienceNumber
+      audienceNumber,
+      isFormValid
     } = this.props;
     return (
       <div>
@@ -68,8 +70,17 @@ class AudienceSignup extends Component {
             error={audienceNumber.get("errors")}
           />
         </form>
+        //TODO button disabled instead of hidden
+        {isFormValid &&
+          <button onClick={() => this.onSubmit()}>
+            Sign up
+          </button>}
       </div>
     );
+  }
+
+  onSubmit(event) {
+    //TODO send email to Tara
   }
 
   onNameChange(event) {
@@ -123,12 +134,13 @@ class AudienceSignup extends Component {
 
 function mapStateToProps(state, props) {
   return {
-    audienceName: state.form.get("audienceName"),
-    audienceAge: state.form.get("audienceAge"),
-    audienceSex: state.form.get("audienceSex"),
-    audienceAddress: state.form.get("audienceAddress"),
-    audienceEmail: state.form.get("audienceEmail"),
-    audienceNumber: state.form.get("audienceNumber")
+    audienceName: state.audienceForm.get("audienceName"),
+    audienceAge: state.audienceForm.get("audienceAge"),
+    audienceSex: state.audienceForm.get("audienceSex"),
+    audienceAddress: state.audienceForm.get("audienceAddress"),
+    audienceEmail: state.audienceForm.get("audienceEmail"),
+    audienceNumber: state.audienceForm.get("audienceNumber"),
+    isFormValid: isFormValid(state)
   };
 }
 
