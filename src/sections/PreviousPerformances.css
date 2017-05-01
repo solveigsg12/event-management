@@ -1,4 +1,41 @@
-.performancesContainer {
+.perviousPerformancesContainer {
   display: flex;
-  border: 1px solid #000000;
+  flex-direction: column;
+}
+
+.previousPerformancesTitle {
+  position: absolute;
+  font-size: 100px;
+  font-weight: 600;
+  top: 10%;
+  left: 10%;
+  justify-content: center;
+  color: #ff6969;
+}
+.performancesImageContainer {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  padding: 20px 0 20px 0;
+}
+
+.performance1 {
+  display:flex;
+  flex: 1;
+  background: url(../img/car.jpg);
+  background-size: cover;
+}
+
+.performance2 {
+  display:flex;
+  flex: 1;
+  background: url(../img/ocean.jpeg);
+  background-size: cover;
+}
+
+.performance3 {
+  display:flex;
+  flex: 1;
+  background: url(../img/mountain.jpeg);
+  background-size: cover;
 }
