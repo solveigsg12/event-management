@@ -8,7 +8,7 @@ import "./Signup.css";
 
 class Signup extends Component {
   render() {
-    const { signupType } = this.props;
+    const { signupType, isFormValid } = this.props;
 
     return (
       <div className="container">
@@ -32,10 +32,6 @@ class Signup extends Component {
           </form>
           {signupType && signupType === "host" && <HostSignup />}
           {signupType && signupType === "audience" && <AudienceSignup />}
-          {signupType &&
-            <button onClick={() => this.onSubmit()}>
-              Sign up
-            </button>}
         </div>
       </div>
     );
@@ -44,15 +40,11 @@ class Signup extends Component {
   onChange(event) {
     this.props.actions.setSignupType(event.target.value);
   }
-
-  onSubmit(event) {
-    //TODO send email to Tara
-  }
 }
 
 function mapStateToProps(state, props) {
   return {
-    signupType: state.form.get("signupType")
+    signupType: state.form.get("signupType"),
   };
 }
 
