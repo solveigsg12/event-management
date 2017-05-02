@@ -1,21 +1,23 @@
+@import '../styles/variables.css';
+
 .frontPageContainer {
   display: flex;
   flex-direction: row;
   height:100vh;
   align-items: center;
   justify-content: center;
-  background-color: #C8C8C8;
+  text-transform: uppercase;
 }
 
 .frontPageLink:hover {
-  color: #7CFC00;
+  color: var(--color-green-bright);
 }
 
 .frontPageLink {
-  padding: 10px;
-  color: #ff6969;
+  padding: 24px;
+  color: var(--color-pink-dark);
   font-family: monospace;
-  font-size: 40px;
+  font-size: 45px;
   font-weight: 500;
   text-decoration: none;
 }
