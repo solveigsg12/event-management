@@ -13,7 +13,7 @@
   top: 15%;
   left: 1%;
   justify-content: center;
-  color: #ff6969;
+  color: var(--color-pink-dark);
 }
 .performancesImageContainer {
   display: flex;
@@ -23,7 +23,7 @@
 
 .previousPerformancesImageText {
   align-self: flex-end;
-  color: #7CFC00;
+  color: var(--color-green-bright);
   font-size: 30px;
   font-weight: 400;
   text-decoration: line-through;

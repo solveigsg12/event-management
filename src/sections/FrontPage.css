@@ -1,3 +1,5 @@
+@import '../styles/variables.css';
+
 .frontPageContainer {
   display: flex;
   flex-direction: row;
@@ -8,12 +10,12 @@
 }
 
 .frontPageLink:hover {
-  color: #7CFC00;
+  color: var(--color-green-bright);
 }
 
 .frontPageLink {
   padding: 24px;
-  color: #ff6969;
+  color: var(--color-pink-dark);
   font-family: monospace;
   font-size: 45px;
   font-weight: 500;
