@@ -6,6 +6,7 @@ import Signup from './sections/Signup';
 import About from './sections/About';
 import Contact from './sections/Contact';
 import PreviousPerformances from './sections/PreviousPerformances';
+import PreviousPerformanceInfo from './sections/PreviousPerformanceInfo';
 
 const Routes = props => (
   <Router>
@@ -18,6 +19,11 @@ const Routes = props => (
         exact={true}
         path="/previous-performances"
         component={PreviousPerformances}
+      />
+      <Route
+        exact={true}
+        path="/previous-performance-info/:previousPerformanceName"
+        component={PreviousPerformanceInfo}
       />
     </div>
   </Router>

@@ -32,20 +32,16 @@
 .performance1, .performance2, .performance3 {
   display:flex;
   flex: 1;
-  text-decoration: none;
 }
 .performance1 {
-  background: url(../img/event1.jpeg);
+  background: url(../img/car.jpg);
   background-size: cover;
-  background-position: center;
 }
 .performance2 {
-  background: url(../img/event2.jpeg);
+  background: url(../img/ocean.jpeg);
   background-size: cover;
-  background-position: center;
 }
 .performance3 {
-  background: url(../img/event3.jpg);
+  background: url(../img/mountain.jpeg);
   background-size: cover;
-  background-position: center; 
 }
