@@ -3,7 +3,7 @@ import { fromJS } from "immutable";
 import { createReducer } from "redux-immutablejs";
 
 const initialState = fromJS({
-  signupType: null,
+  signupType: 'host',
 });
 
 export default createReducer(initialState, {

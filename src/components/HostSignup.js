@@ -21,8 +21,8 @@ class HostSignup extends Component {
     } = this.props;
     return (
       <div>
-        <h1>Host signup</h1>
-        <div>
+        <h1 className="hostHeader">Host signup</h1>
+        <div className="description">
           Signing up here means that you in collaboration with us dress up your daily life(s) as a
           performance for X amount of time, Inviting yourself and audience to view your life as a
           performance.
@@ -78,6 +78,7 @@ class HostSignup extends Component {
             onChange={event => this.onDescriptionChange(event)}
             onBlur={() => this.handleDescriptionBlurred()}
             error={hostDescription.get("errors")}
+            large
           />
           <Input
             label="Why are you interested?"
@@ -85,13 +86,16 @@ class HostSignup extends Component {
             onChange={event => this.onInterestsChange(event)}
             onBlur={() => this.handleInterestsBlurred()}
             error={hostInterests.get("errors")}
+            large
           />
         </form>
-        //TODO button disabled instead of hidden
-        {isFormValid &&
-          <button onClick={() => this.onSubmit()}>
-            Sign up
-          </button>}
+        <button
+          className="button"
+          onClick={() => this.onSubmit()}
+          disabled={!isFormValid}
+        >
+          Sign up
+        </button>
       </div>
     );
   }
