@@ -13,17 +13,20 @@ class Signup extends Component {
     return (
       <div className="container">
         <div className="innerContainer">
-          <h1>Sign up</h1>
-          <form>
+          <h1 className="signupHeader">Sign up</h1>
+          <form className="signupTypeSelect">
             <label htmlFor="host">Host</label>
             <input
+              className="radioSelect"
               type="radio"
               name="signupType"
               value="host"
+              checked={signupType==="host"}
               onChange={event => this.onChange(event)}
             />
             <label htmlFor="audience">Audience</label>
             <input
+              className="radioSelect"
               type="radio"
               name="signupType"
               value="audience"

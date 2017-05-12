@@ -19,8 +19,8 @@ class AudienceSignup extends Component {
     } = this.props;
     return (
       <div>
-        <h1>Audience signup</h1>
-        <div>
+        <h1 className="audienceHeader">Audience signup</h1>
+        <div className="description">
           7.5 Billion humans living on this earth.
           7.5 Billion people living a life as vivid and complex as your own.
 
@@ -70,11 +70,13 @@ class AudienceSignup extends Component {
             error={audienceNumber.get("errors")}
           />
         </form>
-        //TODO button disabled instead of hidden
-        {isFormValid &&
-          <button onClick={() => this.onSubmit()}>
-            Sign up
-          </button>}
+        <button
+          className="button"
+          onClick={() => this.onSubmit()}
+          disabled={!isFormValid}
+        >
+          Sign up
+        </button>
       </div>
     );
   }
