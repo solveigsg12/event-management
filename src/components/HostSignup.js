@@ -29,64 +29,47 @@ class HostSignup extends Component {
 
           This is for anyone, anyone at all. Both individuals or groups.
         </div>
-        <form className="hostForm">
-          <Input
-            label="Name"
-            value={hostName.get("value")}
-            onChange={event => this.onNameChange(event)}
-            onBlur={() => this.handleNameBlurred()}
-            error={hostName.get("errors")}
-          />
-          <Input
-            label="Age"
-            value={hostAge.get("value")}
-            onChange={event => this.onAgeChange(event)}
-            onBlur={() => this.handleAgeBlurred()}
-            error={hostAge.get("errors")}
-          />
-          <Input
-            label="Sex"
-            value={hostSex.get("value")}
-            onChange={event => this.onSexChange(event)}
-            onBlur={() => this.handleSexBlurred()}
-            error={hostSex.get("errors")}
-          />
-          <Input
-            label="Address"
-            value={hostAddress.get("value")}
-            onChange={event => this.onAddressChange(event)}
-            onBlur={() => this.handleAddressBlurred()}
-            error={hostAddress.get("errors")}
-          />
-          <Input
-            label="Email"
-            value={hostEmail.get("value")}
-            onChange={event => this.onEmailChange(event)}
-            onBlur={() => this.handleEmailBlurred()}
-            error={hostEmail.get("errors")}
-          />
-          <Input
-            label="Phone number"
-            value={hostNumber.get("value")}
-            onChange={event => this.onNumberChange(event)}
-            onBlur={() => this.handleNumberBlurred()}
-            error={hostNumber.get("errors")}
-          />
-          <Input
-            label="Short description of yourself"
-            value={hostDescription.get("value")}
-            onChange={event => this.onDescriptionChange(event)}
-            onBlur={() => this.handleDescriptionBlurred()}
-            error={hostDescription.get("errors")}
-          />
-          <Input
-            label="Why are you interested?"
-            value={hostInterests.get("value")}
-            onChange={event => this.onInterestsChange(event)}
-            onBlur={() => this.handleInterestsBlurred()}
-            error={hostInterests.get("errors")}
-          />
-        </form>
+        <form id="gform" method="POST"
+ action="https://script.google.com/macros/s/AKfycbwMxYDrufp73bKdU8gMvxFDdHRuzcR4IKQUB33B7GqwyfyZS04/exec">
+
+   <fieldset>
+     <label htmlFor="name">Name: </label>
+     <input id="name" name="name" placeholder="What your Mom calls you" />
+   </fieldset>
+
+   <fieldset>
+     <label htmlFor="message">Message: </label>
+     <textarea id="message" name="message" rows="10"
+     placeholder="Tell us what's on your mind..."></textarea>
+   </fieldset>
+
+   <fieldset>
+     <label htmlFor="email"><em>Your</em> Email Address:</label>
+     <input id="email" name="email" type="email" value="evadogg@wow.is"
+     required placeholder="your.name@email.com"/>
+     <span id="email-invalid">
+       Must be a valid email address</span>
+   </fieldset>
+
+   <fieldset>
+     <label htmlFor="color">Favourite Color: </label>
+     <input id="color" name="color" placeholder="green" />
+   </fieldset>
+
+   <button>
+     <i></i>&nbsp;Send</button>
+
+ </form>
+
+ <div id="thankyou_message">
+   <h2><em>Thanks</em> for contacting us!
+     We will get back to you soon!</h2>
+ </div>
+
+ <script data-cfasync="false" type="text/javascript"
+ src="https://script.google.com/macros/s/AKfycbwdjGdDsTH1TwQMb5rfn2UPvUzXgAWazcXOAhJnY5tVkPNfVQ/exec"></script>
+ <script data-cfasync="false" type="text/javascript"
+ src="/form-submission-handler.js"></script>
         //TODO button disabled instead of hidden
         {isFormValid &&
           <button onClick={() => this.onSubmit()}>
