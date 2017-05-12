@@ -3,18 +3,16 @@ import PropTypes from "prop-types";
 import classNames from "classnames";
 import Errors from "./Errors";
 
-import styles from "./Input.css";
+import styles from "./TextArea.css";
 
-class Input extends PureComponent {
+class TextArea extends PureComponent {
   render() {
-    const { error, value, label, hidden } = this.props;
+    const { error, large, value, label } = this.props;
     const hasError = Boolean(error && error.size);
     return (
-      <div className={classNames("inputContainer", {
-        ["hidden"]: hidden,
-      })}>
+      <div className="textareaContainer">
         <label className="label" htmlFor={value}>{label}</label>
-        <input className="input"
+        <textarea className="textarea"
           name={label}
           type="text"
           value={value}
@@ -27,14 +25,13 @@ class Input extends PureComponent {
   }
 }
 
-Input.propTypes = {
+TextArea.propTypes = {
   value: PropTypes.any,
   onChange: PropTypes.func.isRequired,
   onBlur: PropTypes.func,
   label: PropTypes.string,
   placeholder: PropTypes.string,
-  error: PropTypes.object,
-  hidden: PropTypes.bool
+  error: PropTypes.object
 };
 
-export default Input;
+export default TextArea;
