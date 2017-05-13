@@ -1,12 +1,15 @@
 import React, {Component} from 'react';
-import './PreviousPerformances.css';
+import Header from './Header';
+import './PreviousPerformanceInfo.css';
 
 class PreviousPerformanceInfo extends Component {
   render() {
-    console.log(this.props.match.params.previousPerformanceName, ' params? ');
     return (
-      <div className="perviousPerformancesContainer">
-        {this.props.match.params.previousPerformanceName.replace('-', ' ')}
+      <div className="perviousPerformanceInfoContainer">
+        <Header />
+        <div className="previousPerformanceInfoHeader">
+          {this.props.match.params.previousPerformanceName.replace('-', ' ')}
+        </div>
       </div>
     );
   }

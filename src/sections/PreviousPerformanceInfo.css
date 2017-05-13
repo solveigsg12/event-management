@@ -1,47 +1,12 @@
-.perviousPerformancesContainer {
+.perviousPerformanceInfoContainer {
   display: flex;
   flex-direction: column;
-  font-family: sans-serif;
-  text-transform: uppercase;
-  height: 100vh;
+  padding: 30px;
 }
 
-.previousPerformancesTitle {
-  position: absolute;
-  font-size: 90px;
-  font-weight: 600;
-  top: 15%;
-  left: 1%;
-  justify-content: center;
-  color: var(--color-pink-dark);
-}
-.performancesImageContainer {
-  display: flex;
-  flex-direction: row;
-  height: 100vh;
-}
-
-.previousPerformancesImageText {
-  align-self: flex-end;
-  color: var(--color-green-bright);
+.previousPerformanceInfoHeader{
   font-size: 30px;
-  font-weight: 400;
-  text-decoration: line-through;
-}
-
-.performance1, .performance2, .performance3 {
-  display:flex;
-  flex: 1;
-}
-.performance1 {
-  background: url(../img/car.jpg);
-  background-size: cover;
-}
-.performance2 {
-  background: url(../img/ocean.jpeg);
-  background-size: cover;
-}
-.performance3 {
-  background: url(../img/mountain.jpeg);
-  background-size: cover;
+  text-align: center;
+  color: var(--color-green-bright);
+  text-transform: uppercase;
 }
