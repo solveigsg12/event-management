@@ -22,7 +22,7 @@ const Routes = props => (
       />
       <Route
         exact={true}
-        path="/previous-performance-info/:previousPerformanceName"
+        path="/previous-performance-info/:previousPerformance"
         component={PreviousPerformanceInfo}
       />
     </div>

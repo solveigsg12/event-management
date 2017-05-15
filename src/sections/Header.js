@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import IconReality from '../icons/Reality';
 import './Header.css';
 
 class Header extends Component {
