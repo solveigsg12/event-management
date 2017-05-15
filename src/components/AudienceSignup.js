@@ -26,7 +26,15 @@ class AudienceSignup extends Component {
 
           Curiosity is key, you have the chance to view one of their daily lives here.
         </div>
-        <form className="audienceForm">
+        <form
+          method="POST" action="http://formspree.io/evasteingrims@gmail.com"
+          className="audienceForm"
+        >
+          <Input
+            label="Signup type"
+            value="Audience"
+            hidden
+          />
           <Input
             label="Name"
             value={audienceName.get("value")}
@@ -69,14 +77,15 @@ class AudienceSignup extends Component {
             onBlur={() => this.handleNumberBlurred()}
             error={audienceNumber.get("errors")}
           />
+          <button
+            type="submit"
+            className="button"
+            onClick={() => this.onSubmit()}
+            disabled={!isFormValid}
+          >
+            Sign up
+          </button>
         </form>
-        <button
-          className="button"
-          onClick={() => this.onSubmit()}
-          disabled={!isFormValid}
-        >
-          Sign up
-        </button>
       </div>
     );
   }

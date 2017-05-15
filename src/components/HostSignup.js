@@ -4,6 +4,7 @@ import { bindActionCreators } from "redux";
 import {isFormValid} from '../selectors/form';
 import * as formActions from "../actions/hostForm";
 import Input from "./Input";
+import TextArea from "./TextArea";
 import "./HostSignup.css";
 
 class HostSignup extends Component {
@@ -29,7 +30,15 @@ class HostSignup extends Component {
 
           This is for anyone, anyone at all. Both individuals or groups.
         </div>
-        <form className="hostForm">
+        <form
+          method="POST" action="http://formspree.io/evasteingrims@gmail.com"
+          className="hostForm"
+        >
+          <Input
+            label="Signup type"
+            value="Host"
+            hidden
+          />
           <Input
             label="Name"
             value={hostName.get("value")}
@@ -72,30 +81,29 @@ class HostSignup extends Component {
             onBlur={() => this.handleNumberBlurred()}
             error={hostNumber.get("errors")}
           />
-          <Input
+          <TextArea
             label="Short description of yourself"
             value={hostDescription.get("value")}
             onChange={event => this.onDescriptionChange(event)}
             onBlur={() => this.handleDescriptionBlurred()}
             error={hostDescription.get("errors")}
-            large
           />
-          <Input
+          <TextArea
             label="Why are you interested?"
             value={hostInterests.get("value")}
             onChange={event => this.onInterestsChange(event)}
             onBlur={() => this.handleInterestsBlurred()}
             error={hostInterests.get("errors")}
-            large
           />
+          <button
+            type="submit"
+            className="button"
+            onClick={() => this.onSubmit()}
+            disabled={!isFormValid}
+          >
+            Sign up
+          </button>
         </form>
-        <button
-          className="button"
-          onClick={() => this.onSubmit()}
-          disabled={!isFormValid}
-        >
-          Sign up
-        </button>
       </div>
     );
   }
