@@ -1,7 +1,4 @@
 import React, {Component} from 'react';
-import {connect} from 'react-redux';
-import {bindActionCreators} from 'redux';
-import * as previousPerformancesActions from '../actions/previousPerformances';
 import Header from './Header';
 import {Link} from 'react-router-dom';
 import './PreviousPerformances.css';
@@ -26,12 +23,8 @@ class PreviousPerformances extends Component {
             <span className="previousPerformancesImageText">The Ocean</span>
           </Link>
           <Link
-            to={'/previous-performance-info/?TheMountain'}
+            to={'/previous-performance-info/TheMountain'}
             className="performance3"
-            onClick={() => {
-              console.log('hallo onclick?');
-              return this.handlePreviousPerformance('The-mountain');
-            }}
           >
             <span className="previousPerformancesImageText">The mountain</span>
           </Link>
@@ -39,24 +32,6 @@ class PreviousPerformances extends Component {
       </div>
     );
   }
-  handlePreviousPerformance(name) {
-    console.log(name, ' hvað er name???');
-    this.props.actions.setPreviousPerformance(name);
-  }
 }
 
-function mapStateToProps(state, props) {
-  return {
-    state,
-  };
-}
-
-function mapDispatchToProps(dispatch) {
-  return {
-    actions: bindActionCreators(previousPerformancesActions, dispatch),
-  };
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(
-  PreviousPerformances
-);
+export default PreviousPerformances;

@@ -1,7 +1,6 @@
 .perviousPerformanceInfoContainer {
   display: flex;
   flex-direction: column;
-  padding: 30px;
 }
 
 .previousPerformanceInfoHeader{
@@ -9,4 +8,17 @@
   text-align: center;
   color: var(--color-green-bright);
   text-transform: uppercase;
+}
+
+.previousPerformanceInfoImgOne, .previousPerformanceInfoImgTwo, .previousPerformanceInfoImgThree {
+  display: flex;
+  width: 600px;
+  padding: 20px;
+  margin-right: 0px;
+}
+
+.previousPerformanceInfoImgTwo {
+  display: flex;
+  margin: 0 auto;
+  margin-right: 0px;
 }
