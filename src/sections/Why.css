@@ -1,0 +1,15 @@
+
+.whyHeader {
+  font-size: 30px;
+  color: var(--color-green-bright);
+  font-family: 'Roboto Mono', monospace;
+
+}
+
+.whyParagraph, .whyHeader{
+  margin: 0 auto;
+  width: 600px;
+  padding-top: 15px;
+  font-family: 'Roboto Mono', monospace;
+
+}
