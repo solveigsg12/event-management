@@ -1,0 +1,14 @@
+.aboutContent {
+  padding: 100px;
+}
+
+.aboutHeader {
+  font-size: 90px;
+  font-weight: 600;
+  justify-content: center;
+  color: var(--color-green-bright);
+}
+
+.aboutText {
+  line-height: 30px;
+}
