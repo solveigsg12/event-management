@@ -1,7 +1,6 @@
 .perviousPerformancesContainer {
   display: flex;
   flex-direction: column;
-  font-family: sans-serif;
   text-transform: uppercase;
   height: 100vh;
 }
