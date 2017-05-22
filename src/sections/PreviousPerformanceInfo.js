@@ -7,7 +7,6 @@ import './PreviousPerformanceInfo.css';
 
 class PreviousPerformanceInfo extends Component {
   render() {
-    console.log(this.props.performanceObject.toJS(), ' hvað er þetta??');
     return (
       <div className="performanceInfoContainer">
         <Header />
