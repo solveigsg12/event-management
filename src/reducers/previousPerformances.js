@@ -70,7 +70,6 @@ const initialState = fromJS({
 
 export default createReducer(initialState, {
   [types.SET_PREVIOUS_PERFORMANCE]: (state, {name, images}) => {
-    console.log('hallo reducer?', images);
     return state.set(name, List(images));
   },
 });
