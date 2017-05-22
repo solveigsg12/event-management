@@ -31,7 +31,7 @@ class HostSignup extends Component {
           This is for anyone, anyone at all. Both individuals or groups.
         </div>
         <form
-          method="POST" action="http://formspree.io/evasteingrims@gmail.com"
+          method="POST" action="http://formspree.io/Taradogg210291@gmail.com"
           className="hostForm"
         >
           <Input
