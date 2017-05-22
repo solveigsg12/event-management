@@ -49,12 +49,6 @@ class PreviousPerformances extends Component {
           >
             <span className="previousPerformancesImageText">Tara</span>
           </Link>
-          <Link
-            to={'/previous-performance-info/TheOcean'}
-            className={classNames('performance', 'test')}
-          >
-            <span className="previousPerformancesImageText">Test</span>
-          </Link>
         </div>
       </div>
     );

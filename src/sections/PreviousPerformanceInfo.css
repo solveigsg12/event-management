@@ -1,24 +1,27 @@
-.perviousPerformanceInfoContainer {
+.performanceInfoContainer {
   display: flex;
   flex-direction: column;
 }
 
-.previousPerformanceInfoHeader{
-  font-size: 30px;
+.performanceInfoImgContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.performanceInfoHeader{
+  font-size: 60px;
   text-align: center;
   color: var(--color-green-bright);
   text-transform: uppercase;
 }
 
-.previousPerformanceInfoImgOne, .previousPerformanceInfoImgTwo, .previousPerformanceInfoImgThree {
-  display: flex;
-  width: 600px;
-  padding: 20px;
-  margin-right: 0px;
+.isPrevious {
+  text-decoration: line-through;
 }
 
-.previousPerformanceInfoImgTwo {
+.performanceInfoImg{
   display: flex;
-  margin: 0 auto;
-  margin-right: 0px;
+  align-self: center;
+  width: 600px;
+  padding: 20px;
 }

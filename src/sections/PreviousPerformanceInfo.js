@@ -1,35 +1,37 @@
 import React, {Component} from 'react';
 import Header from './Header';
-// import LogoImg from ;
+import classNames from 'classnames';
 import {connect} from 'react-redux';
 
 import './PreviousPerformanceInfo.css';
 
 class PreviousPerformanceInfo extends Component {
   render() {
-    console.log('hallo pervious?');
+    console.log(this.props.performanceObject.toJS(), ' hvað er þetta??');
     return (
-      <div className="perviousPerformanceInfoContainer">
+      <div className="performanceInfoContainer">
         <Header />
-        <div className="previousPerformanceInfoHeader">
+        <div
+          className={classNames('performanceInfoHeader', {
+            ['isPrevious']: this.props.performanceObject.get('performance') ===
+              'previous',
+          })}
+        >
           {this.props.match.params.previousPerformance
             .replace(/([A-Z])/g, ' $1')
             .trim()}
-          <img
-            alt="this is image from event 1"
-            src={this.props.performanceObject.get('imgUrlOne')}
-            className="previousPerformanceInfoImgOne"
-          />
-          <img
-            alt="this is image from event 2"
-            src={this.props.performanceObject.get('imgUrlTwo')}
-            className="previousPerformanceInfoImgTwo"
-          />
-          <img
-            alt="this is image from event 3"
-            src={this.props.performanceObject.get('imgUrlThree')}
-            className="previousPerformanceInfoImgThree"
-          />
+          <div className="performanceInfoImgContainer">
+            {this.props.performanceObject.size &&
+              this.props.performanceObject.get('images').map((image, index) => {
+                return (
+                  <img
+                    alt={'this is image from event' + index}
+                    src={image}
+                    className={'performanceInfoImg'}
+                  />
+                );
+              })}
+          </div>
         </div>
       </div>
     );
