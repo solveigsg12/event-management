@@ -1,50 +1,89 @@
 .perviousPerformancesContainer {
   display: flex;
   flex-direction: column;
+  flex: 1;
   text-transform: uppercase;
-  height: 100vh;
+  min-height: 1200px;
+  height: 100%;
+}
+
+.performancesHeader {
+  display: flex;
+  font-size: 80px;
+  color: var(--color-pink-dark);
+  justify-content: center;
+  padding-bottom: 2px;
+}
+
+.previousPerformancesTitle, .upcomingPerformanceTitle {
+  position: absolute;
+  font-size: 80px;
+  font-weight: 600;
+  top: 22%;
+  left: 1%;
+  justify-content: center;
+  color: var(--color-yellow-bright);
 }
 
 .previousPerformancesTitle {
-  position: absolute;
-  font-size: 90px;
-  font-weight: 600;
-  top: 15%;
-  left: 1%;
-  justify-content: center;
-  color: var(--color-pink-dark);
-}
-.performancesImageContainer {
-  display: flex;
-  flex-direction: row;
-  height: 100vh;
+  top: 104%;
 }
 
-.previousPerformancesImageText {
+.performancesImageContainer, .upcomingPerformancesImageContainer {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  height: 100%;
+}
+.performancesImageContainer {
+  padding-top: 20px;
+}
+
+.previousPerformancesImageText, .upcomingPerformanceImageText {
   align-self: flex-end;
   color: var(--color-green-bright);
   font-size: 30px;
   font-weight: 400;
+}
+
+.previousPerformancesImageText {
   text-decoration: line-through;
 }
 
-.performance1, .performance2, .performance3 {
+.performance{
   display:flex;
   flex: 1;
   text-decoration: none;
 }
-.performance1 {
-  background: url(../img/event1.jpeg);
+.tara {
+  background: url(../img/tara-front.png);
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0.2);
+
+}
+.niels {
+  background: url(../img/Niels.jpg);
   background-size: cover;
   background-position: center;
 }
-.performance2 {
+.pauli {
+  background: url(../img/Pauli.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.nastasiaAndStephen {
+  background: url(../img/NastasiaAndStephen.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.asanda {
+  background: url(../img/Asanda.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.test {
   background: url(../img/event2.jpeg);
   background-size: cover;
   background-position: center;
-}
-.performance3 {
-  background: url(../img/event3.jpg);
-  background-size: cover;
-  background-position: center; 
 }

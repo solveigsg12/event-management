@@ -7,6 +7,7 @@ import './PreviousPerformanceInfo.css';
 
 class PreviousPerformanceInfo extends Component {
   render() {
+    console.log('hallo pervious?');
     return (
       <div className="perviousPerformanceInfoContainer">
         <Header />
