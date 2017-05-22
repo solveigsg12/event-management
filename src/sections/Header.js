@@ -7,8 +7,8 @@ class Header extends Component {
       <div className="headerContainer">
         <a href="/" className="headerLogo">Reality</a>
         <div className="headerLinks">
-          <a href="/previous-performances" className="headerLink">
-            Previous Performances
+          <a href="/performances" className="headerLink">
+            Performances
           </a>
           <a href="/sign-up" className="headerLink">Sign Up</a>
           <a href="/about" className="headerLink">About</a>

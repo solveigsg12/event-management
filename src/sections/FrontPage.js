@@ -7,13 +7,6 @@ class FrontPage extends Component {
   constructor() {
     super();
   }
-  componentDidMount() {
-    const video = this.iframe;
-    console.log(video, 'hvað er video??', video.player, this.refs.player);
-    if (video) {
-      video.mute();
-    }
-  }
   render() {
     const src = 'https://www.youtube.com/embed/VwxE-na_hFY?ecver=1';
     const queryParameters =
@@ -34,8 +27,8 @@ class FrontPage extends Component {
             />
           </div>
         </div>
-        <a href="/previous-performances" className="frontPageLink">
-          Previous Performances
+        <a href="/performances" className="frontPageLink">
+          Performances
         </a>
         <a href="/sign-up" className="frontPageLink">Sign Up</a>
         <a href="/about" className="frontPageLink">About</a>

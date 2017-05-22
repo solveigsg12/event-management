@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Header from './Header';
+import classNames from 'classnames';
 import {Link} from 'react-router-dom';
 import './PreviousPerformances.css';
 
@@ -8,25 +9,45 @@ class PreviousPerformances extends Component {
     return (
       <div className="perviousPerformancesContainer">
         <Header />
-        <div className="previousPerformancesTitle">Previous Performances</div>
+        <div className="performancesHeader">Performances</div>
+        <div className="upcomingPerformanceTitle">Upcoming</div>
+        <div className="upcomingPerformancesImageContainer">
+          <Link
+            to={'/previous-performance-info/Asanda'}
+            className={classNames('performance', 'asanda')}
+          >
+            <span className="upcomingPerformanceImageText">Asanda</span>
+          </Link>
+          <Link
+            to={'/previous-performance-info/NastasiaAndStephen'}
+            className={classNames('performance', 'nastasiaAndStephen')}
+          >
+            <span className="upcomingPerformanceImageText">
+              Nastasia And Stephen
+            </span>
+          </Link>
+          <Link
+            to={'/previous-performance-info/Niels'}
+            className={classNames('performance', 'niels')}
+          >
+            <span className="upcomingPerformanceImageText">Niels</span>
+          </Link>
+          <Link
+            to={'/previous-performance-info/Pauli'}
+            className={classNames('performance', 'pauli')}
+          >
+            <span className="upcomingPerformanceImageText">
+              Pauli
+            </span>
+          </Link>
+        </div>
+        <div className="previousPerformancesTitle">Previous</div>
         <div className="performancesImageContainer">
           <Link
-            to={'/previous-performance-info/TheCar'}
-            className="performance1"
+            to={'/previous-performance-info/Tara'}
+            className={classNames('performance', 'tara')}
           >
-            <span className="previousPerformancesImageText">The Car</span>
-          </Link>
-          <Link
-            to={'/previous-performance-info/TheOcean'}
-            className="performance2"
-          >
-            <span className="previousPerformancesImageText">The Ocean</span>
-          </Link>
-          <Link
-            to={'/previous-performance-info/TheMountain'}
-            className="performance3"
-          >
-            <span className="previousPerformancesImageText">The mountain</span>
+            <span className="previousPerformancesImageText">Tara</span>
           </Link>
         </div>
       </div>

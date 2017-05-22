@@ -17,7 +17,7 @@ const Routes = props => (
       <Route exact={true} path="/why" component={Why} />
       <Route
         exact={true}
-        path="/previous-performances"
+        path="/performances"
         component={PreviousPerformances}
       />
       <Route
