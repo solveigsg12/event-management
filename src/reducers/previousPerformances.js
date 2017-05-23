@@ -2,10 +2,11 @@ import * as types from '../actions/actionTypes';
 import {fromJS, Map, List} from 'immutable';
 import {createReducer} from 'redux-immutablejs';
 
-const initializePreviousPerformance = (performance, imageList) => {
+const initializePreviousPerformance = (performance, imageList, text) => {
   return {
     performance: performance,
     images: imageList,
+    text: text,
   };
 };
 
@@ -13,8 +14,6 @@ const initialState = fromJS({
   Tara: initializePreviousPerformance(
     'previous',
     List([
-      require('../img/tara1.png'),
-      require('../img/tara2.png'),
       require('../img/tara3.png'),
       require('../img/tara4.png'),
       require('../img/tara5.png'),
@@ -32,39 +31,28 @@ const initialState = fromJS({
       require('../img/tara17.png'),
       require('../img/tara18.png'),
       require('../img/tara19.png'),
-    ])
+    ]),
+    null
   ),
   Pauli: initializePreviousPerformance(
     'upcoming',
-    List([
-      require('../img/event2.jpeg'),
-      require('../img/event1.jpeg'),
-      require('../img/event3.jpg'),
-    ])
+    null,
+    'Pauli is a danish musician, playing with his band in Berlin. Lasse likes to have a pint of beer instead of a meal every now and then.'
   ),
   Niels: initializePreviousPerformance(
     'upcoming',
-    List([
-      require('../img/event2.jpeg'),
-      require('../img/event1.jpeg'),
-      require('../img/event3.jpg'),
-    ])
+    null,
+    'Niels is a german dj, who does not like clubbing. He likes to drinks so many cups of coffee that he get anxiety, and then uses that high to create music.'
   ),
   NastasiaAndStephen: initializePreviousPerformance(
     'upcoming',
-    List([
-      require('../img/event2.jpeg'),
-      require('../img/event1.jpeg'),
-      require('../img/event3.jpg'),
-    ])
+    null,
+    'Nastasia is a circus performer from France and Stephen is a musician from canada. Every morning they do stretches together. '
   ),
   Asanda: initializePreviousPerformance(
     'upcoming',
-    List([
-      require('../img/event2.jpeg'),
-      require('../img/event1.jpeg'),
-      require('../img/event3.jpg'),
-    ])
+    null,
+    'Asanda is a south African music lover, dj and an entrepreneur living in Berlin.'
   ),
 });
 

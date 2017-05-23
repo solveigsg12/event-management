@@ -19,9 +19,15 @@ class PreviousPerformanceInfo extends Component {
           {this.props.match.params.previousPerformance
             .replace(/([A-Z])/g, ' $1')
             .trim()}
-          <div className="performanceInfoImgContainer">
-            {this.props.performanceObject.size &&
-              this.props.performanceObject.get('images').map((image, index) => {
+        </div>
+        <div className="performanceInfoText">
+          {this.props.performanceObject.get('text', null)}
+        </div>
+        <div className="performanceInfoImgContainer">
+          {this.props.performanceObject.get('images', null) &&
+            this.props.performanceObject
+              .get('images', null)
+              .map((image, index) => {
                 return (
                   <img
                     alt={'this is image from event' + index}
@@ -30,7 +36,6 @@ class PreviousPerformanceInfo extends Component {
                   />
                 );
               })}
-          </div>
         </div>
       </div>
     );

@@ -12,12 +12,12 @@
 }
 
 .frontPageLink:hover {
-  color: var(--color-green-bright);
+  color: var(--color-pink-dark);
 }
 
 .frontPageLink {
   padding: 20px;
-  color: var(--color-pink-dark);
+  color: var(--color-green-bright);
   font-family: 'Roboto Mono', monospace;
   font-size: 45px;
   font-weight: 500;
