@@ -8,7 +8,7 @@ class FrontPage extends Component {
     super();
   }
   render() {
-    const src = 'https://www.youtube.com/embed/VwxE-na_hFY?ecver=1';
+    const src = 'https://www.youtube.com/embed/_8dNTrNMqn8?ecver=1';
     const queryParameters =
       '&rel=0&enablejsapi=1&autoplay=1&controls=0&showinfo=0&loop=1';
     return (
