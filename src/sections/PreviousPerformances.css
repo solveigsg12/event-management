@@ -19,14 +19,14 @@
   position: absolute;
   font-size: 80px;
   font-weight: 600;
-  top: 22%;
-  left: 1%;
+  top: 150px;
+  left: 5px;
   justify-content: center;
   color: var(--color-yellow-bright);
 }
 
 .previousPerformancesTitle {
-  top: 104%;
+  top: 710px;
 }
 
 .performancesImageContainer, .upcomingPerformancesImageContainer {

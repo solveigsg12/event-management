@@ -31,7 +31,7 @@ class FrontPage extends Component {
           Performances
         </a>
         <a href="/sign-up" className="frontPageLink">Sign Up</a>
-        <a href="/about" className="frontPageLink">About</a>
+        <a href="/about" className="frontPageLink">What we do</a>
         {/* <a href="/why" className="frontPageLink">Why</a> */}
       </div>
     );
