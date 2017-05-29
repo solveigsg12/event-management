@@ -1,24 +1,23 @@
 .perviousPerformancesContainer {
   display: flex;
   flex-direction: column;
-  flex: 1;
+  flex-grow: 1;
   text-transform: uppercase;
   min-height: 1200px;
   height: 100%;
+  width: 100%;
 }
 
 .performancesHeader {
-  display: flex;
   font-size: 80px;
   color: var(--color-pink-dark);
-  justify-content: center;
+  text-align: center;
   padding-bottom: 2px;
 }
 
 .previousPerformancesTitle, .upcomingPerformanceTitle {
   position: absolute;
   font-size: 80px;
-  font-weight: 600;
   top: 150px;
   left: 5px;
   justify-content: center;
@@ -33,10 +32,11 @@
   display: flex;
   flex-direction: row;
   flex: 1;
+  min-width: 100%;
   height: 100%;
 }
 .performancesImageContainer {
-  padding-top: 20px;
+  padding: 20px 0;
 }
 
 .previousPerformancesImageText, .upcomingPerformanceImageText {
@@ -81,4 +81,21 @@
   background: url(../img/Asanda.jpg);
   background-size: cover;
   background-position: center;
+}
+
+
+@media (max-width: 450px) {
+  .performancesHeader{
+    font-size: 40px;
+  }
+  .previousPerformancesTitle, .upcomingPerformanceTitle {
+    font-size: 50px;
+    top: 105px;
+  }
+  .previousPerformancesTitle {
+    top: 680px;
+  }
+  .previousPerformancesImageText, .upcomingPerformanceImageText {
+    font-size: 20px;
+  }
 }

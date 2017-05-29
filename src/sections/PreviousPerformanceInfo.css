@@ -32,3 +32,14 @@
   font-size: 18px;
   padding-top: 10px;
 }
+
+@media (max-width: 450px) {
+  .performanceInfoHeader {
+    font-size: 35px;
+  }
+
+  .performanceInfoText {
+    max-width: 320px;
+    justify-content: center;
+  }
+}

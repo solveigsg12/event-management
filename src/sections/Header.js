@@ -12,7 +12,7 @@ class Header extends Component {
           </a>
           <a href="/sign-up" className="headerLink">Sign Up</a>
           <a href="/about" className="headerLink">About</a>
-          <a href="/contact-us" className="headerLink">contactUs</a>
+          <a href="/contact-us" className="headerLink">Contact Us</a>
         </div>
       </div>
     );

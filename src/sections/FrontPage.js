@@ -25,11 +25,11 @@ class FrontPage extends Component {
         />
         <div className="fontPageLinkContainer">
           <a href="/performances" className="frontPageLink">
-            performances
+            Performances
           </a>
-          <a href="/sign-up" className="frontPageLink">signUp</a>
-          <a href="/about" className="frontPageLink">aboutUs</a>
-          <a href="/about" className="frontPageLink">contactUs</a>
+          <a href="/sign-up" className="frontPageLink">SignUp</a>
+          <a href="/about" className="frontPageLink">AboutUs</a>
+          <a href="/contact-us" className="frontPageLink">ContactUs</a>
         </div>
         {/* <a href="/why" className="frontPageLink">Why</a> */}
       </div>

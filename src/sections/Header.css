@@ -30,3 +30,12 @@
 .headerLink:hover, .headerLogo:hover {
   color: var(--color-green-bright);
 }
+
+@media (max-width: 450px) {
+  .headerLink{
+    font-size: 12px;
+  }
+.headerLogo{
+  font-size: 20px;
+  }
+}

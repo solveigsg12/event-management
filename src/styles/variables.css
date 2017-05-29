@@ -6,3 +6,5 @@
   --color-white: #ffffff;
   --color-yellow-bright: #FFFF00;
 }
+
+@custom-media --mobile (max-width: 480px);
