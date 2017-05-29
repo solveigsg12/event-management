@@ -5,6 +5,7 @@ import App from './App';
 import Signup from './sections/Signup';
 import About from './sections/About';
 import Why from './sections/Why';
+import ContactUs from './sections/ContactUs';
 import PreviousPerformances from './sections/PreviousPerformances';
 import PreviousPerformanceInfo from './sections/PreviousPerformanceInfo';
 
@@ -15,6 +16,7 @@ const Routes = props => (
       <Route exact={true} path="/sign-up" component={Signup} />
       <Route exact={true} path="/about" component={About} />
       <Route exact={true} path="/why" component={Why} />
+      <Route exact={true} path="/contact-us" component={ContactUs} />
       <Route
         exact={true}
         path="/performances"

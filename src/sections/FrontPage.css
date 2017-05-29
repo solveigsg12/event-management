@@ -2,7 +2,8 @@
 
 .frontPageContainer {
   display: block;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 100%;
 }
 
 .fontPageLinkContainer {
@@ -44,9 +45,18 @@
   transition: 1s opacity;
 }
 
-@media (max-width: 440px) {
+@media (max-width: 1010px) {
+  .frontPageLink {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 650px) {
   .fontPageLinkContainer {
     display: flex;
     flex-direction: column;
+    font-size: 45px;
+    justify-content: center;
+    align-self: center;
   }
 }
