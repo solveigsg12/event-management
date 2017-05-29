@@ -13,25 +13,23 @@ class FrontPage extends Component {
       '&rel=0&enablejsapi=1&autoplay=1&controls=0&showinfo=0&loop=1';
     return (
       <div className="frontPageContainer">
-        <div class="video-background">
-          <div class="video-foreground">
-            <iframe
-              ref={node => {
-                this.iframe = node;
-              }}
-              id="player"
-              className="video"
-              src={`${src}${queryParameters}`}
-              frameborder="0"
-              allowfullscreen
-            />
-          </div>
+        <iframe
+          ref={node => {
+            this.iframe = node;
+          }}
+          id="player"
+          className="video"
+          src={`${src}${queryParameters}`}
+          frameBorder="0"
+          allowFullScreen
+        />
+        <div className="fontPageLinkContainer">
+          <a href="/performances" className="frontPageLink">
+            performances
+          </a>
+          <a href="/sign-up" className="frontPageLink">signUp</a>
+          <a href="/about" className="frontPageLink">aboutUs</a>
         </div>
-        <a href="/performances" className="frontPageLink">
-          Performances
-        </a>
-        <a href="/sign-up" className="frontPageLink">Sign Up</a>
-        <a href="/about" className="frontPageLink">What we do</a>
         {/* <a href="/why" className="frontPageLink">Why</a> */}
       </div>
     );

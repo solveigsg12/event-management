@@ -1,14 +1,16 @@
 @import '../styles/variables.css';
 
 .frontPageContainer {
-  display: flex;
-  flex-direction: row;
-  height:100vh;
-  align-items: center;
-  justify-content: center;
-  text-transform: lowercase;
+  display: block;
   background-color: rgba(0, 0, 0, 0.2);
+}
 
+.fontPageLinkContainer {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
 }
 
 .frontPageLink:hover {
@@ -16,12 +18,13 @@
 }
 
 .frontPageLink {
-  padding: 20px;
+  padding: 15px;
   color: var(--color-green-bright);
   font-family: 'Roboto Mono', monospace;
   font-size: 45px;
   font-weight: 500;
   text-decoration: none;
+  text-align: center;
 }
 
 .video {
@@ -39,4 +42,11 @@
   background: url(//demosthenes.info/assets/images/polina.jpg) no-repeat;
   background-size: cover;
   transition: 1s opacity;
+}
+
+@media (max-width: 440px) {
+  .fontPageLinkContainer {
+    display: flex;
+    flex-direction: column;
+  }
 }
