@@ -13,6 +13,7 @@ class FrontPage extends Component {
       '&rel=0&enablejsapi=1&autoplay=1&controls=0&showinfo=0&loop=1';
     return (
       <div className="frontPageContainer">
+        <a href="/" className="frontPageLogo">REAL(ITY)</a>
         <iframe
           ref={node => {
             this.iframe = node;

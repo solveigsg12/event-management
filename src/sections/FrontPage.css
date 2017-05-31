@@ -6,6 +6,20 @@
   height: 100%;
 }
 
+.frontPageLogo {
+  display: flex;
+  justify-content: flex-start;
+  position: absolute;
+  padding: 5px 0 0 20px;
+  color: var(--color-pink-dark);
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.frontPageLogo:hover {
+  color: var(--color-green-bright);
+}
+
 .fontPageLinkContainer {
   height: 100vh;
   display: flex;
