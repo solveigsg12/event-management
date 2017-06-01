@@ -34,7 +34,7 @@ const initialState = fromJS({
       require('../img/tara19.png'),
     ]),
     null,
-    'https://www.youtube.com/embed/_8dNTrNMqn8?ecver=1'
+    'https://www.youtube.com/embed/hj2SacOtqNg?ecver=1'
   ),
   Pauli: initializePreviousPerformance(
     'upcoming',
