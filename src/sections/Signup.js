@@ -1,15 +1,15 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
-import { bindActionCreators } from "redux";
-import * as formActions from "../actions/form";
-import HostSignup from "../components/HostSignup";
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
+import * as formActions from '../actions/form';
+import HostSignup from '../components/HostSignup';
 import Header from './Header';
-import AudienceSignup from "../components/AudienceSignup";
-import "./Signup.css";
+import AudienceSignup from '../components/AudienceSignup';
+import './Signup.css';
 
 class Signup extends Component {
   render() {
-    const { signupType, isFormValid } = this.props;
+    const {signupType, isFormValid} = this.props;
 
     return (
       <div>
@@ -18,13 +18,13 @@ class Signup extends Component {
           <div className="innerContainer">
             <h1 className="signupHeader">Sign up</h1>
             <form className="signupTypeSelect">
-              <label htmlFor="host">Host</label>
+              <label htmlFor="host">(Performer)</label>
               <input
                 className="radioSelect"
                 type="radio"
                 name="signupType"
                 value="host"
-                checked={signupType==="host"}
+                checked={signupType === 'host'}
                 onChange={event => this.onChange(event)}
               />
               <label htmlFor="audience">Audience</label>
@@ -36,8 +36,8 @@ class Signup extends Component {
                 onChange={event => this.onChange(event)}
               />
             </form>
-            {signupType && signupType === "host" && <HostSignup />}
-            {signupType && signupType === "audience" && <AudienceSignup />}
+            {signupType && signupType === 'host' && <HostSignup />}
+            {signupType && signupType === 'audience' && <AudienceSignup />}
           </div>
         </div>
       </div>
@@ -51,13 +51,13 @@ class Signup extends Component {
 
 function mapStateToProps(state, props) {
   return {
-    signupType: state.form.get("signupType"),
+    signupType: state.form.get('signupType'),
   };
 }
 
 function mapDispatchToProps(dispatch) {
   return {
-    actions: bindActionCreators(formActions, dispatch)
+    actions: bindActionCreators(formActions, dispatch),
   };
 }
 

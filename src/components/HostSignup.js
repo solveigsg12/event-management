@@ -1,11 +1,11 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
-import { bindActionCreators } from "redux";
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
 import {isFormValid} from '../selectors/form';
-import * as formActions from "../actions/hostForm";
-import Input from "./Input";
-import TextArea from "./TextArea";
-import "./HostSignup.css";
+import * as formActions from '../actions/hostForm';
+import Input from './Input';
+import TextArea from './TextArea';
+import './HostSignup.css';
 
 class HostSignup extends Component {
   render() {
@@ -31,69 +31,66 @@ class HostSignup extends Component {
           This is for anyone, anyone at all. Both individuals or groups.
         </div>
         <form
-          method="POST" action="http://formspree.io/Taradogg210291@gmail.com"
+          method="POST"
+          action="http://formspree.io/Taradogg210291@gmail.com"
           className="hostForm"
         >
-          <Input
-            label="Signup type"
-            value="Host"
-            hidden
-          />
+          <Input label="Signup type" value="Host" hidden />
           <Input
             label="Name"
-            value={hostName.get("value")}
+            value={hostName.get('value')}
             onChange={event => this.onNameChange(event)}
             onBlur={() => this.handleNameBlurred()}
-            error={hostName.get("errors")}
+            error={hostName.get('errors')}
           />
           <Input
             label="Age"
-            value={hostAge.get("value")}
+            value={hostAge.get('value')}
             onChange={event => this.onAgeChange(event)}
             onBlur={() => this.handleAgeBlurred()}
-            error={hostAge.get("errors")}
+            error={hostAge.get('errors')}
           />
           <Input
             label="Sex"
-            value={hostSex.get("value")}
+            value={hostSex.get('value')}
             onChange={event => this.onSexChange(event)}
             onBlur={() => this.handleSexBlurred()}
-            error={hostSex.get("errors")}
+            error={hostSex.get('errors')}
           />
           <Input
-            label="Address"
-            value={hostAddress.get("value")}
+            label="City you live in"
+            value={hostAddress.get('value')}
             onChange={event => this.onAddressChange(event)}
             onBlur={() => this.handleAddressBlurred()}
-            error={hostAddress.get("errors")}
+            error={hostAddress.get('errors')}
           />
           <Input
             label="Email"
-            value={hostEmail.get("value")}
+            value={hostEmail.get('value')}
             onChange={event => this.onEmailChange(event)}
             onBlur={() => this.handleEmailBlurred()}
-            error={hostEmail.get("errors")}
+            error={hostEmail.get('errors')}
           />
           <Input
             label="Phone number"
-            value={hostNumber.get("value")}
+            value={hostNumber.get('value')}
             onChange={event => this.onNumberChange(event)}
             onBlur={() => this.handleNumberBlurred()}
-            error={hostNumber.get("errors")}
+            error={hostNumber.get('errors')}
           />
           <TextArea
             label="Short description of yourself"
-            value={hostDescription.get("value")}
+            value={hostDescription.get('value')}
             onChange={event => this.onDescriptionChange(event)}
             onBlur={() => this.handleDescriptionBlurred()}
-            error={hostDescription.get("errors")}
+            error={hostDescription.get('errors')}
           />
           <TextArea
             label="Why are you interested?"
-            value={hostInterests.get("value")}
+            value={hostInterests.get('value')}
             onChange={event => this.onInterestsChange(event)}
             onBlur={() => this.handleInterestsBlurred()}
-            error={hostInterests.get("errors")}
+            error={hostInterests.get('errors')}
           />
           <button
             type="submit"
@@ -179,21 +176,21 @@ class HostSignup extends Component {
 
 function mapStateToProps(state, props) {
   return {
-    hostName: state.hostForm.get("hostName"),
-    hostAge: state.hostForm.get("hostAge"),
-    hostSex: state.hostForm.get("hostSex"),
-    hostAddress: state.hostForm.get("hostAddress"),
-    hostEmail: state.hostForm.get("hostEmail"),
-    hostNumber: state.hostForm.get("hostNumber"),
-    hostDescription: state.hostForm.get("hostDescription"),
-    hostInterests: state.hostForm.get("hostInterests"),
+    hostName: state.hostForm.get('hostName'),
+    hostAge: state.hostForm.get('hostAge'),
+    hostSex: state.hostForm.get('hostSex'),
+    hostAddress: state.hostForm.get('hostAddress'),
+    hostEmail: state.hostForm.get('hostEmail'),
+    hostNumber: state.hostForm.get('hostNumber'),
+    hostDescription: state.hostForm.get('hostDescription'),
+    hostInterests: state.hostForm.get('hostInterests'),
     isFormValid: isFormValid(state),
   };
 }
 
 function mapDispatchToProps(dispatch) {
   return {
-    actions: bindActionCreators(formActions, dispatch)
+    actions: bindActionCreators(formActions, dispatch),
   };
 }
 

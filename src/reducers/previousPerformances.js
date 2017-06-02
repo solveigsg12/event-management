@@ -2,11 +2,12 @@ import * as types from '../actions/actionTypes';
 import {fromJS, Map, List} from 'immutable';
 import {createReducer} from 'redux-immutablejs';
 
-const initializePreviousPerformance = (performance, imageList, text) => {
+const initializePreviousPerformance = (performance, imageList, text, video) => {
   return {
     performance: performance,
     images: imageList,
     text: text,
+    video: video,
   };
 };
 
@@ -32,27 +33,32 @@ const initialState = fromJS({
       require('../img/tara18.png'),
       require('../img/tara19.png'),
     ]),
-    null
+    null,
+    'https://www.youtube.com/embed/hj2SacOtqNg?ecver=1'
   ),
   Pauli: initializePreviousPerformance(
     'upcoming',
     null,
-    'Pauli is a danish musician, playing with his band in Berlin. Lasse likes to have a pint of beer instead of a meal every now and then.'
+    'Pauli is a danish musician, playing with his band in Berlin. Pauli likes to have a pint of beer instead of a meal every now and then.',
+    null
   ),
   Niels: initializePreviousPerformance(
     'upcoming',
     null,
-    'Niels is a german dj, who does not like clubbing. He likes to drinks so many cups of coffee that he get anxiety, and then uses that high to create music.'
+    'Niels is a german dj, who does not like clubbing. He likes to drinks so many cups of coffee that he get anxiety, and then uses that high to create music.',
+    null
   ),
   NastasiaAndStephen: initializePreviousPerformance(
     'upcoming',
     null,
-    'Nastasia is a circus performer from France and Stephen is a musician from canada. Every morning they do stretches together. '
+    'Nastasia is a circus performer from France and Stephen is a musician from canada. Every morning they do stretches together. ',
+    null
   ),
   Asanda: initializePreviousPerformance(
     'upcoming',
     null,
-    'Asanda is a south African music lover, dj and an entrepreneur living in Berlin.'
+    'Asanda is a south African music lover, dj and an entrepreneur living in Berlin.',
+    null
   ),
 });
 

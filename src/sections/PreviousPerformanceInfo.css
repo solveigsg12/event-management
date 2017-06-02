@@ -7,7 +7,10 @@
   display: flex;
   flex-direction: column;
 }
-
+.videoContainer {
+  display: flex;
+  justify-content: center;
+}
 .performanceInfoHeader{
   font-size: 60px;
   text-align: center;
@@ -31,4 +34,15 @@
   width: 500px;
   font-size: 18px;
   padding-top: 10px;
+}
+
+@media (max-width: 450px) {
+  .performanceInfoHeader {
+    font-size: 35px;
+  }
+
+  .performanceInfoText {
+    max-width: 320px;
+    justify-content: center;
+  }
 }
